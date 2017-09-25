@@ -3,30 +3,28 @@
 #include <math.h>
 #include <assert.h>
 
-	FILE *powerTraceFile; // pointer to all input files
-	FILE *outputFile;
-	FILE *ambientFile;
-	FILE *paraFile;
-	double cap[4];
-	double rest[4][4];
-	double power[4];
-	double temp[4];
+FILE *powerTraceFile; // pointer to all input files
+FILE *outputFile;
+FILE *ambientFile;
+FILE *paraFile;
+double cap[4];
+double rest[4][4];
+double power[4];
+double temp[4];
 
-	double time;
-	double ambient;
-	double t;
-	void rk(double n);
-	double alphaFunction(double temp);
-	double f(double t, double y, int x);
-	void age(double ti);
+double time;
+double ambient;
+double t;
+void rk(double n);
+double alphaFunction(double temp);
+double f(double t, double y, int x);
+void age(double ti);
 
 int main (int argc, char *argv[]){
 
-
 	assert(argc>= 3);// all files have been inputed
 
-
-		if(argc== 5){ // checks if there was an optional ambient temperature file
+	if(argc== 5){ // checks if there was an optional ambient temperature file
 		ambientFile= fopen( argv[3], "r");
 		assert(ambientFile != NULL);
 		fscanf( ambientFile, "%f", &ambient); // scans in ambient temperature
@@ -34,48 +32,47 @@ int main (int argc, char *argv[]){
 		paraFile = fopen(argv[1],"r");
 		powerTraceFile = fopen(argv[2],"r");
 		outputFile = fopen(argv[4],"wt");
-		printf("loaded four  files\n");} // check delete later
+		printf("loaded four  files\n");
+	} // check delete later
 
-		else { // if no ambient load all files
-			ambient = 300;// ambient is 300 K
+	else { // if no ambient load all files
+		ambient = 300;// ambient is 300 K
 
-			paraFile = fopen(argv[1],"r"); /// open all files
-			powerTraceFile = fopen(argv[2],"r");
-			outputFile = fopen(argv[3],"wt");
+		paraFile = fopen(argv[1],"r"); /// open all files
+		powerTraceFile = fopen(argv[2],"r");
+		outputFile = fopen(argv[3],"wt");
+	}
+
+	assert(paraFile != NULL); // checks for the themal parameter file
+	assert( powerTraceFile != NULL); // checks for the power trace file
+	assert( outputFile != NULL); // checks for the output file
+
+	int i, j;
+
+	for( i=0; i<4; i++){ // created capacitor array
+		fscanf(paraFile, "%f",&cap[i]);
+	}
+
+	for( i=0; i<4; i++){// create resistor matrix
+		for( j=0; j<4;j++){
+			fscanf(paraFile,"%f", &rest[i][j]);
 		}
+	}
 
-		assert(paraFile != NULL); // checks for the themal parameter file
-		assert( powerTraceFile != NULL); // checks for the power trace file
-		assert( outputFile != NULL); // checks for the output file
+	for( i=0; i<4; i++){ // set the inital condition
+		temp[i] = ambient;
+	}
 
-		int i, j;
+	 t =0; //time =0;
 
-		for( i=0; i<4; i++){ // created capacitor array
-			fscanf(paraFile, "%f",&cap[i]);
+	while ( fscanf(powerTraceFile,"%f\n", &time)== 1) {// calls the RK for the entire file
+		for(  i=0; i<4; i++){// gets the power
+			fscanf(powerTraceFile, "%lf",&power[i]);
+			printf(" power %f", power[i]);
 		}
-
-		for( i=0; i<4; i++){// create resistor matrix
-			for( j=0; j<4;j++){
-				fscanf(paraFile,"%f", &rest[i][j]);
-			}
-		}
-
-		for( i=0; i<4; i++){ // set the inital condition
-			temp[i] = ambient;
-		}
-
-		 t =0; //time =0;
-
-		while ( fscanf(powerTraceFile,"%f\n", &time)== 1) {// calls the RK for the entire file
-
-			for(  i=0; i<4; i++){// gets the power
-				fscanf(powerTraceFile, "%lf",&power[i]);
-				printf(" power %f", power[i]);
-			}
-
-			printf( " time %f\n", time);
-			rk( time );
-		}
+		printf( " time %f\n", time);
+		rk( time );
+	}
 
 	printf("done");
 	fclose(powerTraceFile);  // close all files
