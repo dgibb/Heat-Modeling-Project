@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <assert.h>
-
+ 
 FILE *powerTraceFile; // pointer to all input files
 FILE *outputFile;
 FILE *ambientFile;
