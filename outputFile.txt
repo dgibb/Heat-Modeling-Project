@@ -1,50 +1,50 @@
 Time = 0.000000
-core 0: temp = 0.000000, output = 1.027868
-core 1: temp = 0.000000, output = 1.027868
-core 2: temp = 0.000000, output = 1.027860
-core 3: temp = 0.000000, output = 1.027863
+core 0: temp = 300.266700, output = 1.027868
+core 1: temp = 300.266694, output = 1.027868
+core 2: temp = 300.266625, output = 1.027860
+core 3: temp = 300.266647, output = 1.027863
 Time = 0.010000
-core 0: temp = 0.000000, output = 1.099246
-core 1: temp = 0.000000, output = 1.099244
-core 2: temp = 0.000000, output = 1.099217
-core 3: temp = 0.000000, output = 1.099225
+core 0: temp = 300.920115, output = 1.099246
+core 1: temp = 300.920096, output = 1.099244
+core 2: temp = 300.919856, output = 1.099217
+core 3: temp = 300.919933, output = 1.099225
 Time = 0.020000
-core 0: temp = 0.000000, output = 1.172442
-core 1: temp = 0.000000, output = 1.172438
-core 2: temp = 0.000000, output = 1.172390
-core 3: temp = 0.000000, output = 1.172405
+core 0: temp = 301.550194, output = 1.172442
+core 1: temp = 301.550162, output = 1.172438
+core 2: temp = 301.549758, output = 1.172390
+core 3: temp = 301.549887, output = 1.172405
 Time = 0.030000
-core 0: temp = 0.000000, output = 1.203958
-core 1: temp = 0.000000, output = 1.203953
-core 2: temp = 0.000000, output = 1.203895
-core 3: temp = 0.000000, output = 1.203914
+core 0: temp = 301.810227, output = 1.203958
+core 1: temp = 301.810189, output = 1.203953
+core 2: temp = 301.809718, output = 1.203895
+core 3: temp = 301.809869, output = 1.203914
 Time = 0.040000
-core 0: temp = 0.000000, output = 1.213195
-core 1: temp = 0.000000, output = 1.213191
-core 2: temp = 0.000000, output = 1.213130
-core 3: temp = 0.000000, output = 1.213149
+core 0: temp = 301.885237, output = 1.213195
+core 1: temp = 301.885198, output = 1.213191
+core 2: temp = 301.884707, output = 1.213130
+core 3: temp = 301.884864, output = 1.213149
 Time = 0.050000
-core 0: temp = 0.000000, output = 1.219804
-core 1: temp = 0.000000, output = 1.219799
-core 2: temp = 0.000000, output = 1.219737
-core 3: temp = 0.000000, output = 1.219757
+core 0: temp = 301.938578, output = 1.219804
+core 1: temp = 301.938537, output = 1.219799
+core 2: temp = 301.938033, output = 1.219737
+core 3: temp = 301.938194, output = 1.219757
 Time = 0.060000
-core 0: temp = 0.000000, output = 1.224783
-core 1: temp = 0.000000, output = 1.224778
-core 2: temp = 0.000000, output = 1.224714
-core 3: temp = 0.000000, output = 1.224735
+core 0: temp = 301.978583, output = 1.224783
+core 1: temp = 301.978542, output = 1.224778
+core 2: temp = 301.978027, output = 1.224714
+core 3: temp = 301.978192, output = 1.224735
 Time = 0.080000
-core 0: temp = 0.000000, output = 1.231452
-core 1: temp = 0.000000, output = 1.231446
-core 2: temp = 0.000000, output = 1.231380
-core 3: temp = 0.000000, output = 1.231401
+core 0: temp = 302.031925, output = 1.231452
+core 1: temp = 302.031882, output = 1.231446
+core 2: temp = 302.031353, output = 1.231380
+core 3: temp = 302.031522, output = 1.231401
 Time = 0.090000
-core 0: temp = 0.000000, output = 1.233124
-core 1: temp = 0.000000, output = 1.233119
-core 2: temp = 0.000000, output = 1.233052
-core 3: temp = 0.000000, output = 1.233073
+core 0: temp = 302.045260, output = 1.233124
+core 1: temp = 302.045217, output = 1.233119
+core 2: temp = 302.044685, output = 1.233052
+core 3: temp = 302.044855, output = 1.233073
 Time = 0.100000
-core 0: temp = 0.000000, output = 1.239834
-core 1: temp = 0.000000, output = 1.239829
-core 2: temp = 0.000000, output = 1.239760
-core 3: temp = 0.000000, output = 1.239782
+core 0: temp = 302.098600, output = 1.239834
+core 1: temp = 302.098557, output = 1.239829
+core 2: temp = 302.098010, output = 1.239760
+core 3: temp = 302.098185, output = 1.239782
