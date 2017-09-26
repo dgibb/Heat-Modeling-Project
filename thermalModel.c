@@ -155,7 +155,7 @@ void age(double ti){ // age of each core
     for(i = 0; i < 4; i++){
         tempDevice[i] = alphaFunction(temp[i]);
         output[i] = (tempDevice[i]/tempAmbient);
-        fprintf(outputFile, "core %d: temp = %lf, output = %lf\n", i, tempDevice[i], output[i]);
+        fprintf(outputFile, "core %d: temp = %lf, output = %lf\n", i, temp[i], output[i]);
     }
 }
 
