@@ -1,6 +1,12 @@
+Heat-Modeling-Project
+
+
 A Worked in pairs to create a program simulating heat flow and aging in a multicore computer processor.
 
 Uses the Runge-Kutta (rk) method to solve a system of differential equations
+
+To Run
+
 
 compile with command 'gcc thermalModel.c -o thermalModel.out'
 
